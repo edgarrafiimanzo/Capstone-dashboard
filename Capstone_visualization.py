@@ -15,7 +15,7 @@ app = dash.Dash(
 
 app.title = 'Tech Layoffs 2020-2022'
 
-df = pd.read_csv(r'C:\Users\edgar\Desktop\smm_dadp\layoffs_1.csv')
+df = pd.read_csv(r'layoffs_1.csv')
 df['date']= pd.to_datetime(df['date'])
 df['bulan']= df['date'].dt.to_period('M')
 df['bulan']= df['bulan'].dt.to_timestamp()
